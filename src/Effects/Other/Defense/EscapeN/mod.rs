@@ -1,0 +1,75 @@
+use {
+    crate::BLITZ_FLAG,
+    crate::DEFAULT_FLAG,
+    crate::ELEMENT_FLAG,
+    crate::GUARDIAN_FLAG,
+    crate::SECOND_FLAG,
+    crate::STRIKE_FLAG,
+    crate::ULTIMA_FLAG,
+    smash::{
+        app::{lua_bind::*, sv_animcmd::*, *},
+        hash40,
+        lib::{lua_const::*, L2CAgent, L2CValue},
+        lua2cpp::*,
+        phx::*,
+    },
+    smash_script::*,
+    smashline::{Priority::*, *},
+};
+
+unsafe extern "C" fn effect_escapen(agent: &mut L2CAgentBase) {
+    if macros::is_excute(agent) {
+        macros::FOOT_EFFECT(
+            agent,
+            Hash40::new("sys_down_smoke"),
+            Hash40::new("top"),
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.8,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            true,
+        );
+        ModelModule::set_mesh_visibility(
+            agent.module_accessor,
+            Hash40::new("trail_mainbody"),
+            false,
+        );
+        ModelModule::set_mesh_visibility(agent.module_accessor, Hash40::new("trail_blitz"), true);
+        ModelModule::set_mesh_visibility(
+            agent.module_accessor,
+            Hash40::new("trail_element"),
+            false,
+        );
+        ModelModule::set_mesh_visibility(
+            agent.module_accessor,
+            Hash40::new("trail_guardian"),
+            false,
+        );
+        ModelModule::set_mesh_visibility(agent.module_accessor, Hash40::new("trail_second"), false);
+        ModelModule::set_mesh_visibility(agent.module_accessor, Hash40::new("trail_strike"), false);
+        ModelModule::set_mesh_visibility(agent.module_accessor, Hash40::new("trail_ultima"), false);
+
+        DEFAULT_FLAG = false;
+        BLITZ_FLAG = true;
+        ELEMENT_FLAG = false;
+        GUARDIAN_FLAG = false;
+        SECOND_FLAG = false;
+        STRIKE_FLAG = false;
+        ULTIMA_FLAG = false;
+    }
+}
+
+pub fn install() {
+    Agent::new("trail")
+        .effect_acmd("effect_escapen", effect_escapen, Low)
+        .install();
+}

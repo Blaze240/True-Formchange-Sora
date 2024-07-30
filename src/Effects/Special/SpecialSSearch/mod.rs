@@ -15,7 +15,7 @@ unsafe extern "C" fn effect_specialssearch(agent: &mut L2CAgentBase) {
     if macros::is_excute(agent) {
         macros::EFFECT(
             agent,
-            Hash40::new("trail_sonic_turn_ultima"),
+            Hash40::new("trail_sonic_turn"),
             Hash40::new("top"),
             0,
             10,
@@ -38,7 +38,7 @@ unsafe extern "C" fn effect_specialssearch(agent: &mut L2CAgentBase) {
 pub fn install() {
     Agent::new("trail")
         .effect_acmd(
-            "effect_specialssearch_ultima",
+            "effect_specialssearch",
             effect_specialssearch,
             Priority::Low,
         )

@@ -13,7 +13,7 @@ unsafe extern "C" fn effect_specialairhi(agent: &mut L2CAgentBase) {
     if macros::is_excute(agent) {
         macros::EFFECT(
             agent,
-            Hash40::new("trail_as_flash_start_ultima"),
+            Hash40::new("trail_as_flash_start"),
             Hash40::new("haver"),
             0,
             10,
@@ -35,7 +35,7 @@ unsafe extern "C" fn effect_specialairhi(agent: &mut L2CAgentBase) {
     if macros::is_excute(agent) {
         macros::EFFECT_FOLLOW(
             agent,
-            Hash40::new("trail_keyblade_flare_ultima"),
+            Hash40::new("trail_keyblade_flare"),
             Hash40::new("haver"),
             0,
             0,
@@ -48,7 +48,7 @@ unsafe extern "C" fn effect_specialairhi(agent: &mut L2CAgentBase) {
         );
         macros::AFTER_IMAGE4_ON_arg29(
             agent,
-            Hash40::new("tex_trail_keyblade1_ultima"),
+            Hash40::new("tex_trail_keyblade1"),
             Hash40::new("tex_trail_keyblade2"),
             14,
             Hash40::new("haver"),
@@ -80,7 +80,7 @@ unsafe extern "C" fn effect_specialairhi(agent: &mut L2CAgentBase) {
         );
         macros::EFFECT_FOLLOW(
             agent,
-            Hash40::new("trail_as_flash_ultima"),
+            Hash40::new("trail_as_flash"),
             Hash40::new("haver"),
             0,
             10,
@@ -97,7 +97,7 @@ unsafe extern "C" fn effect_specialairhi(agent: &mut L2CAgentBase) {
     if macros::is_excute(agent) {
         macros::EFFECT_FOLLOW(
             agent,
-            Hash40::new("trail_as_wind_ultima"),
+            Hash40::new("trail_as_wind"),
             Hash40::new("top"),
             0,
             5,
@@ -117,7 +117,7 @@ unsafe extern "C" fn effect_specialairhi(agent: &mut L2CAgentBase) {
     if macros::is_excute(agent) {
         macros::AFTER_IMAGE4_ON_arg29(
             agent,
-            Hash40::new("tex_trail_as1_ultima"),
+            Hash40::new("tex_trail_as1"),
             Hash40::new("tex_trail_keyblade2"),
             14,
             Hash40::new("haver"),
@@ -149,7 +149,7 @@ unsafe extern "C" fn effect_specialairhi(agent: &mut L2CAgentBase) {
         );
         macros::EFFECT_FOLLOW(
             agent,
-            Hash40::new("trail_as_flash_finish_tr"),
+            Hash40::new("trail_as_flash_finish"),
             Hash40::new("haver"),
             0,
             10,
@@ -166,7 +166,7 @@ unsafe extern "C" fn effect_specialairhi(agent: &mut L2CAgentBase) {
     if macros::is_excute(agent) {
         macros::EFFECT_FOLLOW(
             agent,
-            Hash40::new("trail_as_swing_ultima"),
+            Hash40::new("trail_as_swing"),
             Hash40::new("top"),
             -3,
             14,
@@ -184,12 +184,12 @@ unsafe extern "C" fn effect_specialairhi(agent: &mut L2CAgentBase) {
     }
     frame(agent.lua_state_agent, 52.0);
     if macros::is_excute(agent) {
-        macros::EFFECT_OFF_KIND(agent, Hash40::new("trail_keyblade_flare_ultima"), false, false);
+        macros::EFFECT_OFF_KIND(agent, Hash40::new("trail_keyblade_flare"), false, false);
     }
 }
 
 pub fn install() {
     Agent::new("trail")
-        .effect_acmd("effect_specialairhi_ultima", effect_specialairhi, Priority::Low)
+        .effect_acmd("effect_specialairhi", effect_specialairhi, Priority::Low)
         .install();
 }

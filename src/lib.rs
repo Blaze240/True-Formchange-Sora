@@ -9,12 +9,23 @@
     non_snake_case,
     clippy::borrow_interior_mutable_const
 )]
+static mut DEFAULT_FLAG: bool = false;
 
-static mut RAGE_FLAG: bool = false;
+static mut BLITZ_FLAG: bool = false;
+static mut ELEMENT_FLAG: bool = false;
+static mut GUARDIAN_FLAG: bool = false;
+static mut SECOND_FLAG: bool = false;
+static mut STRIKE_FLAG: bool = false;
+static mut ULTIMA_FLAG: bool = false;
+static mut LIGHT_FLAG: bool = false;
+static mut DARK_FLAG: bool = false;
+static mut DOUBLE_FLAG: bool = false;
 
-mod Form_Switch;
+mod Effects;
+mod Ultima_Check;
 
-#[skyline::main(name = "true_rage_form")]
+#[skyline::main(name = "true_formchange")]
 pub fn main() {
-    Form_Switch::install();
+    Ultima_Check::install();
+    Effects::install();
 }

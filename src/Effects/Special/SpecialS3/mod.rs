@@ -15,7 +15,7 @@ unsafe extern "C" fn effect_specials3(agent: &mut L2CAgentBase) {
     if macros::is_excute(agent) {
         macros::EFFECT_FOLLOW(
             agent,
-            Hash40::new("trail_keyblade_flare_ultima"),
+            Hash40::new("trail_keyblade_flare"),
             Hash40::new("haver"),
             0,
             0,
@@ -31,7 +31,7 @@ unsafe extern "C" fn effect_specials3(agent: &mut L2CAgentBase) {
     if macros::is_excute(agent) {
         macros::EFFECT_FOLLOW(
             agent,
-            Hash40::new("trail_sonic_attack_ultima"),
+            Hash40::new("trail_sonic_attack"),
             Hash40::new("rot"),
             0,
             -2,
@@ -70,7 +70,7 @@ unsafe extern "C" fn effect_specials3(agent: &mut L2CAgentBase) {
     if macros::is_excute(agent) {
         macros::EFFECT(
             agent,
-            Hash40::new("trail_sonic_impact_ultima"),
+            Hash40::new("trail_sonic_impact"),
             Hash40::new("rot"),
             0,
             -2,
@@ -90,11 +90,11 @@ unsafe extern "C" fn effect_specials3(agent: &mut L2CAgentBase) {
     }
     frame(agent.lua_state_agent, 11.0);
     if macros::is_excute(agent) {
-        macros::EFFECT_OFF_KIND(agent, Hash40::new("trail_keyblade_flare_ultima"), false, false);
+        macros::EFFECT_OFF_KIND(agent, Hash40::new("trail_keyblade_flare"), false, false);
     }
 }
 pub fn install() {
     Agent::new("trail")
-        .effect_acmd("effect_specials3_ultima", effect_specials3, Priority::Low)
+        .effect_acmd("effect_specials3", effect_specials3, Priority::Low)
         .install();
 }

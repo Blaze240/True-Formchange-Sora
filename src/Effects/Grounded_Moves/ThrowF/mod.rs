@@ -37,7 +37,7 @@ unsafe extern "C" fn effect_throwf(agent: &mut L2CAgentBase) {
     if macros::is_excute(agent) {
         macros::EFFECT_FOLLOW(
             agent,
-            Hash40::new("trail_atk_slash_throw_f_ultima"),
+            Hash40::new("trail_atk_slash_throw_f"),
             Hash40::new("top"),
             0,
             0,
@@ -53,7 +53,7 @@ unsafe extern "C" fn effect_throwf(agent: &mut L2CAgentBase) {
     if macros::is_excute(agent) {
         macros::EFFECT_FOLLOW(
             agent,
-            Hash40::new("trail_keyblade_flare_ultima"),
+            Hash40::new("trail_keyblade_flare"),
             Hash40::new("haver"),
             0,
             0,
@@ -67,7 +67,7 @@ unsafe extern "C" fn effect_throwf(agent: &mut L2CAgentBase) {
     }
     frame(agent.lua_state_agent, 20.0);
     if macros::is_excute(agent) {
-        macros::EFFECT_OFF_KIND(agent, Hash40::new("trail_keyblade_flare_ultima"), false, true);
+        macros::EFFECT_OFF_KIND(agent, Hash40::new("trail_keyblade_flare"), false, true);
     }
     frame(agent.lua_state_agent, 42.0);
     if macros::is_excute(agent) {
@@ -95,6 +95,6 @@ unsafe extern "C" fn effect_throwf(agent: &mut L2CAgentBase) {
 
 pub fn install() {
     Agent::new("trail")
-        .effect_acmd("effect_throwf_ultima", effect_throwf, Priority::Low)
+        .effect_acmd("effect_throwf", effect_throwf, Priority::Low)
         .install();
 }

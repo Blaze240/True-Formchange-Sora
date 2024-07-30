@@ -1,4 +1,14 @@
 use {
+    crate::BLITZ_FLAG,
+    crate::DARK_FLAG,
+    crate::DEFAULT_FLAG,
+    crate::DOUBLE_FLAG,
+    crate::ELEMENT_FLAG,
+    crate::GUARDIAN_FLAG,
+    crate::LIGHT_FLAG,
+    crate::SECOND_FLAG,
+    crate::STRIKE_FLAG,
+    crate::ULTIMA_FLAG,
     smash::{
         app::{lua_bind::*, sv_animcmd::*, *},
         hash40,
@@ -12,6 +22,36 @@ use {
 
 unsafe extern "C" fn effect_attacklw4(agent: &mut L2CAgentBase) {
     if macros::is_excute(agent) {
+        ModelModule::set_mesh_visibility(
+            agent.module_accessor,
+            Hash40::new("trail_mainbody"),
+            false,
+        );
+        ModelModule::set_mesh_visibility(agent.module_accessor, Hash40::new("trail_blitz"), false);
+        ModelModule::set_mesh_visibility(agent.module_accessor, Hash40::new("trail_element"), false);
+        ModelModule::set_mesh_visibility(
+            agent.module_accessor,
+            Hash40::new("trail_guardian"),
+            false,
+        );
+        ModelModule::set_mesh_visibility(agent.module_accessor, Hash40::new("trail_second"), false);
+        ModelModule::set_mesh_visibility(agent.module_accessor, Hash40::new("trail_strike"), true);
+        ModelModule::set_mesh_visibility(agent.module_accessor, Hash40::new("trail_ultima"), false);
+        ModelModule::set_mesh_visibility(agent.module_accessor, Hash40::new("trail_light"), false);
+        ModelModule::set_mesh_visibility(agent.module_accessor, Hash40::new("trail_dark"), false);
+        ModelModule::set_mesh_visibility(agent.module_accessor, Hash40::new("trail_double"), false);
+
+        DEFAULT_FLAG = false;
+        BLITZ_FLAG = false;
+        ELEMENT_FLAG = false;
+        GUARDIAN_FLAG = false;
+        SECOND_FLAG = false;
+        STRIKE_FLAG = true;
+        ULTIMA_FLAG = false;
+        LIGHT_FLAG = false;
+        DARK_FLAG = false;
+        DOUBLE_FLAG = false;
+
         macros::EFFECT(
             agent,
             Hash40::new("sys_smash_flash"),
@@ -36,7 +76,7 @@ unsafe extern "C" fn effect_attacklw4(agent: &mut L2CAgentBase) {
     if macros::is_excute(agent) {
         macros::EFFECT_FOLLOW(
             agent,
-            Hash40::new("trail_smash_lw_flash_ultima"),
+            Hash40::new("trail_smash_lw_flash"),
             Hash40::new("haver"),
             0,
             11,
@@ -52,7 +92,7 @@ unsafe extern "C" fn effect_attacklw4(agent: &mut L2CAgentBase) {
     if macros::is_excute(agent) {
         macros::EFFECT_FOLLOW(
             agent,
-            Hash40::new("trail_smash_lw_speedline_ultima"),
+            Hash40::new("trail_smash_lw_speedline"),
             Hash40::new("top"),
             0,
             0,
@@ -68,7 +108,7 @@ unsafe extern "C" fn effect_attacklw4(agent: &mut L2CAgentBase) {
     if macros::is_excute(agent) {
         macros::EFFECT(
             agent,
-            Hash40::new("trail_smash_lw_impact_ultima"),
+            Hash40::new("trail_smash_lw_impact"),
             Hash40::new("top"),
             0,
             0,
@@ -87,7 +127,7 @@ unsafe extern "C" fn effect_attacklw4(agent: &mut L2CAgentBase) {
         );
         macros::EFFECT_FOLLOW_ALPHA(
             agent,
-            Hash40::new("trail_keyblade_flare_ultima"),
+            Hash40::new("trail_keyblade_flare"),
             Hash40::new("haver"),
             0,
             0,
@@ -101,7 +141,7 @@ unsafe extern "C" fn effect_attacklw4(agent: &mut L2CAgentBase) {
         );
         macros::EFFECT(
             agent,
-            Hash40::new("trail_smash_lw_attack_ultima"),
+            Hash40::new("trail_smash_lw_attack"),
             Hash40::new("haver"),
             0,
             -2,
@@ -144,7 +184,7 @@ unsafe extern "C" fn effect_attacklw4(agent: &mut L2CAgentBase) {
     }
     frame(agent.lua_state_agent, 26.0);
     if macros::is_excute(agent) {
-        macros::EFFECT_OFF_KIND(agent, Hash40::new("trail_keyblade_flare_ultima"), false, true);
+        macros::EFFECT_OFF_KIND(agent, Hash40::new("trail_keyblade_flare"), false, true);
     }
     frame(agent.lua_state_agent, 57.0);
     if macros::is_excute(agent) {
@@ -172,6 +212,6 @@ unsafe extern "C" fn effect_attacklw4(agent: &mut L2CAgentBase) {
 
 pub fn install() {
     Agent::new("trail")
-        .effect_acmd("effect_attacklw4_ultima", effect_attacklw4, Priority::Low)
+        .effect_acmd("effect_attacklw4", effect_attacklw4, Priority::Low)
         .install();
 }

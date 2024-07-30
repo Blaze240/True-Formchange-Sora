@@ -36,7 +36,7 @@ unsafe extern "C" fn effect_landingairlw(agent: &mut L2CAgentBase) {
         if macros::is_excute(agent) {
             macros::EFFECT(
                 agent,
-                Hash40::new("trail_air_lw_impact_ultima"),
+                Hash40::new("trail_air_lw_impact"),
                 Hash40::new("top"),
                 0,
                 0,
@@ -58,7 +58,7 @@ unsafe extern "C" fn effect_landingairlw(agent: &mut L2CAgentBase) {
             if macros::is_excute(agent) {
                 macros::EFFECT(
                     agent,
-                    Hash40::new("trail_air_lw_impact_ultima"),
+                    Hash40::new("trail_air_lw_impact"),
                     Hash40::new("top"),
                     0,
                     0,
@@ -81,6 +81,6 @@ unsafe extern "C" fn effect_landingairlw(agent: &mut L2CAgentBase) {
 
 pub fn install() {
     Agent::new("trail")
-        .effect_acmd("effect_landingairlw_ultima", effect_landingairlw, Priority::Low)
+        .effect_acmd("effect_landingairlw", effect_landingairlw, Priority::Low)
         .install();
 }

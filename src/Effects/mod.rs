@@ -12,12 +12,14 @@ use {
 
 mod Aerials;
 mod Grounded_Moves;
+mod Other;
 mod Special;
 mod SpecialAir;
 
 pub fn install() {
-    Aerials::install();
-    Grounded_Moves::install();
-    Special::install();
-    SpecialAir::install();
+    Other::install();
+    //Aerials::install();
+    //Grounded_Moves::install();
+    //Special::install();
+    //SpecialAir::install();
 }
