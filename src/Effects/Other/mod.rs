@@ -10,10 +10,13 @@
 )]
 
 mod Defense;
+mod Entry;
+mod Taunts;
 mod Wait1;
 
 pub fn install() {
-
     Wait1::install();
     Defense::install();
+    Taunts::install();
+    Entry::install();
 }

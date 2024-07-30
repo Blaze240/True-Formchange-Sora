@@ -1,4 +1,14 @@
 use {
+    crate::BLITZ_FLAG,
+    crate::DARK_FLAG,
+    crate::DEFAULT_FLAG,
+    crate::DOUBLE_FLAG,
+    crate::ELEMENT_FLAG,
+    crate::GUARDIAN_FLAG,
+    crate::LIGHT_FLAG,
+    crate::SECOND_FLAG,
+    crate::STRIKE_FLAG,
+    crate::ULTIMA_FLAG,
     smash::{
         app::{lua_bind::*, sv_animcmd::*, *},
         hash40,
@@ -11,6 +21,196 @@ use {
 };
 unsafe extern "C" fn effect_specialhi(agent: &mut L2CAgentBase) {
     if macros::is_excute(agent) {
+        let rand = smash::app::sv_math::rand(hash40("agent"), 3);
+        if rand == 1 {
+            ModelModule::set_mesh_visibility(
+                agent.module_accessor,
+                Hash40::new("trail_mainbody"),
+                false,
+            );
+            ModelModule::set_mesh_visibility(
+                agent.module_accessor,
+                Hash40::new("trail_blitz"),
+                false,
+            );
+            ModelModule::set_mesh_visibility(
+                agent.module_accessor,
+                Hash40::new("trail_element"),
+                false,
+            );
+            ModelModule::set_mesh_visibility(
+                agent.module_accessor,
+                Hash40::new("trail_guardian"),
+                false,
+            );
+            ModelModule::set_mesh_visibility(
+                agent.module_accessor,
+                Hash40::new("trail_second"),
+                false,
+            );
+            ModelModule::set_mesh_visibility(
+                agent.module_accessor,
+                Hash40::new("trail_strike"),
+                false,
+            );
+            ModelModule::set_mesh_visibility(
+                agent.module_accessor,
+                Hash40::new("trail_ultima"),
+                false,
+            );
+            ModelModule::set_mesh_visibility(
+                agent.module_accessor,
+                Hash40::new("trail_light"),
+                true,
+            );
+            ModelModule::set_mesh_visibility(
+                agent.module_accessor,
+                Hash40::new("trail_dark"),
+                false,
+            );
+            ModelModule::set_mesh_visibility(
+                agent.module_accessor,
+                Hash40::new("trail_double"),
+                false,
+            );
+
+            DEFAULT_FLAG = false;
+            BLITZ_FLAG = false;
+            ELEMENT_FLAG = false;
+            GUARDIAN_FLAG = false;
+            SECOND_FLAG = false;
+            STRIKE_FLAG = false;
+            ULTIMA_FLAG = false;
+            LIGHT_FLAG = true;
+            DARK_FLAG = false;
+            DOUBLE_FLAG = false;
+        }
+        if rand == 2 {
+            ModelModule::set_mesh_visibility(
+                agent.module_accessor,
+                Hash40::new("trail_mainbody"),
+                false,
+            );
+            ModelModule::set_mesh_visibility(
+                agent.module_accessor,
+                Hash40::new("trail_blitz"),
+                false,
+            );
+            ModelModule::set_mesh_visibility(
+                agent.module_accessor,
+                Hash40::new("trail_element"),
+                false,
+            );
+            ModelModule::set_mesh_visibility(
+                agent.module_accessor,
+                Hash40::new("trail_guardian"),
+                false,
+            );
+            ModelModule::set_mesh_visibility(
+                agent.module_accessor,
+                Hash40::new("trail_second"),
+                false,
+            );
+            ModelModule::set_mesh_visibility(
+                agent.module_accessor,
+                Hash40::new("trail_strike"),
+                false,
+            );
+            ModelModule::set_mesh_visibility(
+                agent.module_accessor,
+                Hash40::new("trail_ultima"),
+                false,
+            );
+            ModelModule::set_mesh_visibility(
+                agent.module_accessor,
+                Hash40::new("trail_light"),
+                false,
+            );
+            ModelModule::set_mesh_visibility(
+                agent.module_accessor,
+                Hash40::new("trail_dark"),
+                true,
+            );
+            ModelModule::set_mesh_visibility(
+                agent.module_accessor,
+                Hash40::new("trail_double"),
+                false,
+            );
+
+            DEFAULT_FLAG = false;
+            BLITZ_FLAG = false;
+            ELEMENT_FLAG = false;
+            GUARDIAN_FLAG = false;
+            SECOND_FLAG = false;
+            STRIKE_FLAG = false;
+            ULTIMA_FLAG = false;
+            LIGHT_FLAG = false;
+            DARK_FLAG = true;
+            DOUBLE_FLAG = false;
+        } else {
+            ModelModule::set_mesh_visibility(
+                agent.module_accessor,
+                Hash40::new("trail_mainbody"),
+                false,
+            );
+            ModelModule::set_mesh_visibility(
+                agent.module_accessor,
+                Hash40::new("trail_blitz"),
+                false,
+            );
+            ModelModule::set_mesh_visibility(
+                agent.module_accessor,
+                Hash40::new("trail_element"),
+                false,
+            );
+            ModelModule::set_mesh_visibility(
+                agent.module_accessor,
+                Hash40::new("trail_guardian"),
+                false,
+            );
+            ModelModule::set_mesh_visibility(
+                agent.module_accessor,
+                Hash40::new("trail_second"),
+                false,
+            );
+            ModelModule::set_mesh_visibility(
+                agent.module_accessor,
+                Hash40::new("trail_strike"),
+                false,
+            );
+            ModelModule::set_mesh_visibility(
+                agent.module_accessor,
+                Hash40::new("trail_ultima"),
+                false,
+            );
+            ModelModule::set_mesh_visibility(
+                agent.module_accessor,
+                Hash40::new("trail_light"),
+                false,
+            );
+            ModelModule::set_mesh_visibility(
+                agent.module_accessor,
+                Hash40::new("trail_dark"),
+                false,
+            );
+            ModelModule::set_mesh_visibility(
+                agent.module_accessor,
+                Hash40::new("trail_double"),
+                true,
+            );
+
+            DEFAULT_FLAG = false;
+            BLITZ_FLAG = false;
+            ELEMENT_FLAG = false;
+            GUARDIAN_FLAG = false;
+            SECOND_FLAG = false;
+            STRIKE_FLAG = false;
+            ULTIMA_FLAG = false;
+            LIGHT_FLAG = false;
+            DARK_FLAG = false;
+            DOUBLE_FLAG = true;
+        }
+
         macros::EFFECT(
             agent,
             Hash40::new("trail_as_flash_start"),

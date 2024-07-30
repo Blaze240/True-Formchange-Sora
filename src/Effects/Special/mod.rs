@@ -9,21 +9,21 @@ use {
     smash_script::*,
     smashline::{Priority::*, *},
 };
+mod SpecialN1Start;
+mod SpecialN2;
+mod SpecialN3;
 
 mod SpecialHi;
 mod SpecialLw;
-mod SpecialS1;
-mod SpecialS2;
-mod SpecialS3;
+
 mod SpecialSStart;
-mod SpecialSSearch;
 
 pub fn install() {
+    SpecialN1Start::install();
+    SpecialN2::install();
+    SpecialN3::install();
+
     SpecialHi::install();
     SpecialLw::install();
     SpecialSStart::install();
-    SpecialS1::install();
-    SpecialS2::install();
-    SpecialS3::install();
-    SpecialSSearch::install();
 }

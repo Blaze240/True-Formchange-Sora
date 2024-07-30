@@ -18,8 +18,8 @@ mod SpecialAir;
 
 pub fn install() {
     Other::install();
-    //Aerials::install();
-    //Grounded_Moves::install();
-    //Special::install();
-    //SpecialAir::install();
+    Aerials::install();
+    Grounded_Moves::install();
+    Special::install();
+    SpecialAir::install();
 }

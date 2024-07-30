@@ -10,20 +10,20 @@ use {
     smashline::{Priority::*, *},
 };
 
+mod SpecialAirN1Start;
+mod SpecialAirN2;
+mod SpecialAirN3;
+
 mod SpecialAirHi;
 mod SpecialAirLw;
-mod SpecialAirS1;
-mod SpecialAirS2;
-mod SpecialAirS3;
+
 mod SpecialAirSStart;
-mod SpecialAirSSearch;
 
 pub fn install() {
     SpecialAirHi::install();
     SpecialAirLw::install();
     SpecialAirSStart::install();
-    SpecialAirS1::install();
-    SpecialAirS2::install();
-    SpecialAirS3::install();
-    SpecialAirSSearch::install();
+    SpecialAirN1Start::install();
+    SpecialAirN2::install();
+    SpecialAirN3::install();
 }
