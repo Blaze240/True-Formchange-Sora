@@ -15,13 +15,13 @@ mod SpecialAirN2;
 mod SpecialAirN3;
 
 mod SpecialAirHi;
-mod SpecialAirLw;
+mod SpecialAirLwStart;
 
 mod SpecialAirSStart;
 
 pub fn install() {
     SpecialAirHi::install();
-    SpecialAirLw::install();
+    SpecialAirLwStart::install();
     SpecialAirSStart::install();
     SpecialAirN1Start::install();
     SpecialAirN2::install();

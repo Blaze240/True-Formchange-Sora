@@ -14,7 +14,7 @@ mod SpecialN2;
 mod SpecialN3;
 
 mod SpecialHi;
-mod SpecialLw;
+mod SpecialLwStart;
 
 mod SpecialSStart;
 
@@ -24,6 +24,6 @@ pub fn install() {
     SpecialN3::install();
 
     SpecialHi::install();
-    SpecialLw::install();
+    SpecialLwStart::install();
     SpecialSStart::install();
 }
