@@ -16,8 +16,11 @@ mod AttackLw4;
 
 mod AttackS4;
 
+mod AttackDash;
+
 pub fn install() {
     AttackS4::install();
     AttackHi4::install();
     AttackLw4::install();
+    AttackDash::install();
 }
