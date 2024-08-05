@@ -147,7 +147,8 @@ unsafe extern "C" fn effect_specialairhi(agent: &mut L2CAgentBase) {
             LIGHT_FLAG = false;
             DARK_FLAG = true;
             DOUBLE_FLAG = false;
-        } else {
+        }
+        if rand == 0 {
             ModelModule::set_mesh_visibility(
                 agent.module_accessor,
                 Hash40::new("trail_mainbody"),
@@ -389,6 +390,10 @@ unsafe extern "C" fn effect_specialairhi(agent: &mut L2CAgentBase) {
 
 pub fn install() {
     Agent::new("trail")
-        .effect_acmd("effect_specialairhi_formchange", effect_specialairhi, Priority::Low)
+        .effect_acmd(
+            "effect_specialairhi_formchange",
+            effect_specialairhi,
+            Priority::Low,
+        )
         .install();
 }
