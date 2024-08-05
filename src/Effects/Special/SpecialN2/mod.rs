@@ -73,7 +73,7 @@ unsafe extern "C" fn effect_specialn2(agent: &mut L2CAgentBase) {
 pub fn install() {
     Agent::new("trail")
         .effect_acmd(
-            "effect_specialn2",
+            "effect_specialn2_formchange",
             effect_specialn2,
             Priority::Low,
         )

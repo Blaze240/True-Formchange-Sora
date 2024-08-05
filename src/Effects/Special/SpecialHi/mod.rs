@@ -432,6 +432,6 @@ unsafe extern "C" fn effect_specialhi(agent: &mut L2CAgentBase) {
 
 pub fn install() {
     Agent::new("trail")
-        .effect_acmd("effect_specialhi", effect_specialhi, Priority::Low)
+        .effect_acmd("effect_specialhi_formchange", effect_specialhi, Priority::Low)
         .install();
 }

@@ -164,6 +164,6 @@ unsafe extern "C" fn effect_attackhi4(agent: &mut L2CAgentBase) {
 
 pub fn install() {
     Agent::new("trail")
-        .effect_acmd("effect_attackhi4", effect_attackhi4, Priority::Low)
+        .effect_acmd("effect_attackhi4_formchange", effect_attackhi4, Priority::Low)
         .install();
 }

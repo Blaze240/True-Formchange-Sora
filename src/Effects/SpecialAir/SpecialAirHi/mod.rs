@@ -389,6 +389,6 @@ unsafe extern "C" fn effect_specialairhi(agent: &mut L2CAgentBase) {
 
 pub fn install() {
     Agent::new("trail")
-        .effect_acmd("effect_specialairhi", effect_specialairhi, Priority::Low)
+        .effect_acmd("effect_specialairhi_formchange", effect_specialairhi, Priority::Low)
         .install();
 }

@@ -59,6 +59,6 @@ unsafe extern "C" fn effect_guardon(agent: &mut L2CAgentBase) {
 }
 pub fn install() {
     Agent::new("trail")
-        .effect_acmd("effect_guardon", effect_guardon, Low)
+        .effect_acmd("effect_guardon_formchange", effect_guardon, Low)
         .install();
 }

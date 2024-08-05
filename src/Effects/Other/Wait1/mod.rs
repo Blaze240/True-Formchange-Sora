@@ -59,6 +59,6 @@ unsafe extern "C" fn effect_wait1(agent: &mut L2CAgentBase) {
 }
 pub fn install() {
     Agent::new("trail")
-        .effect_acmd("effect_wait1", effect_wait1, Low)
+        .effect_acmd("effect_wait1_formchange", effect_wait1, Low)
         .install();
 }

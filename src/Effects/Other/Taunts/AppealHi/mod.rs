@@ -255,6 +255,44 @@ unsafe extern "C" fn effect_appealhi(agent: &mut L2CAgentBase) {
                     true,
                 );
             }
+            frame(agent.lua_state_agent, 23.0);
+            if macros::is_excute(agent) {
+                macros::EFFECT_FOLLOW(
+                    agent,
+                    Hash40::new("trail_stopga_flash"),
+                    Hash40::new("haver"),
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    true,
+                );
+            }
+            frame(agent.lua_state_agent, 24.0);
+            if macros::is_excute(agent) {
+                macros::LANDING_EFFECT(
+                    agent,
+                    Hash40::new("sys_v_smoke_a"),
+                    Hash40::new("top"),
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0.65,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    false,
+                );
+            }
         } else {
             if macros::is_excute(agent) {
                 ModelModule::set_mesh_visibility(
@@ -529,7 +567,7 @@ unsafe extern "C" fn effect_appealhi(agent: &mut L2CAgentBase) {
 
 pub fn install() {
     Agent::new("trail")
-        .effect_acmd("effect_appealhil", effect_appealhi, Low)
-        .effect_acmd("effect_appealhir", effect_appealhi, Low)
+        .effect_acmd("effect_appealhil_formchange", effect_appealhi, Low)
+        .effect_acmd("effect_appealhir_formchange", effect_appealhi, Low)
         .install();
 }

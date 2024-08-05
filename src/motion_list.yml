@@ -25,7 +25,7 @@ list:
     scripts:
       - expression_wait1
       - sound_wait1
-      - effect_wait1
+      - effect_wait1_formchange
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -1795,7 +1795,7 @@ list:
     scripts:
       - expression_guardon
       - sound_guardon
-      - effect_guardon
+      - effect_guardon_formchange
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -1945,7 +1945,7 @@ list:
     scripts:
       - expression_escapen
       - sound_escapen
-      - effect_escapen
+      - effect_escapen_formchange
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -1975,7 +1975,7 @@ list:
     scripts:
       - expression_escapef
       - sound_escapef
-      - effect_escapef
+      - effect_escapef_formchange
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2005,7 +2005,7 @@ list:
     scripts:
       - expression_escapeb
       - sound_escapeb
-      - effect_escapeb
+      - effect_escapeb_formchange
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2035,7 +2035,7 @@ list:
     scripts:
       - expression_escapeair
       - sound_escapeair
-      - effect_escapeair
+      - effect_escapeair_formchange
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2065,7 +2065,7 @@ list:
     scripts:
       - expression_escapeairslide
       - sound_escapeairslide
-      - effect_escapeairslide
+      - effect_escapeairslide_formchange
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2125,7 +2125,7 @@ list:
     scripts:
       - expression_attack11
       - sound_attack11
-      - effect_attack11_ultima
+      - effect_attack11
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2155,7 +2155,7 @@ list:
     scripts:
       - expression_attack12
       - sound_attack12
-      - effect_attack12_ultima
+      - effect_attack12
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2185,7 +2185,7 @@ list:
     scripts:
       - expression_attack13
       - sound_attack13
-      - effect_attack13_ultima
+      - effect_attack13
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2215,7 +2215,7 @@ list:
     scripts:
       - expression_attackdash
       - sound_attackdash
-      - effect_attackdash
+      - effect_attackdash_formchange
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2245,7 +2245,7 @@ list:
     scripts:
       - expression_attacks3
       - sound_attacks3
-      - effect_attacks3_ultima
+      - effect_attacks3
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2305,7 +2305,7 @@ list:
     scripts:
       - expression_attacks33
       - sound_attacks33
-      - effect_attacks33_ultima
+      - effect_attacks33
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2335,7 +2335,7 @@ list:
     scripts:
       - expression_attackhi3
       - sound_attackhi3
-      - effect_attackhi3_ultima
+      - effect_attackhi3
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2365,7 +2365,7 @@ list:
     scripts:
       - expression_attacklw3
       - sound_attacklw3
-      - effect_attacklw3_ultima
+      - effect_attacklw3
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2395,7 +2395,7 @@ list:
     scripts:
       - expression_attacks4
       - sound_attacks4
-      - effect_attacks4_ultima
+      - effect_attacks4_formchange
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2515,7 +2515,7 @@ list:
     scripts:
       - expression_attacklw4
       - sound_attacklw4
-      - effect_attacklw4_ultima
+      - effect_attacklw4_formchange
     extra:
       xlu_start: 3
       xlu_end: 7
@@ -2575,7 +2575,7 @@ list:
     scripts:
       - expression_attackairn
       - sound_attackairn
-      - effect_attackairn_ultima
+      - effect_attackairn
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2605,7 +2605,7 @@ list:
     scripts:
       - expression_attackairn2
       - sound_attackairn2
-      - effect_attackairn2_ultima
+      - effect_attackairn2
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2635,7 +2635,7 @@ list:
     scripts:
     - expression_attackairn3
     - sound_attackairn3
-    - effect_attackairn3_ultima
+    - effect_attackairn3
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2665,7 +2665,7 @@ list:
     scripts:
       - expression_attackairf
       - sound_attackairf
-      - effect_attackairf_ultima
+      - effect_attackairf
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2695,7 +2695,7 @@ list:
     scripts:
       - expression_attackairf2
       - sound_attackairf2
-      - effect_attackairf2_ultima
+      - effect_attackairf2
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2725,7 +2725,7 @@ list:
     scripts:
       - expression_attackairf3
       - sound_attackairf3
-      - effect_attackairf3_ultima
+      - effect_attackairf3
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2755,7 +2755,7 @@ list:
     scripts:
       - expression_attackairb
       - sound_attackairb
-      - effect_attackairb_ultima
+      - effect_attackairb
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2785,7 +2785,7 @@ list:
     scripts:
       - expression_attackairhi
       - sound_attackairhi
-      - effect_attackairhi_ultima
+      - effect_attackairhi
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -2815,7 +2815,7 @@ list:
     scripts:
       - expression_attackairlw
       - sound_attackairlw
-      - effect_attackairlw_ultima
+      - effect_attackairlw_formchange
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -3115,7 +3115,7 @@ list:
     scripts:
       - "0x19cf5e9e06"
       - "0x1496f872a5"
-      - "0x15f916e4dc"
+      - effect_specialn1start_formchange
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -3235,7 +3235,7 @@ list:
     scripts:
       - expression_specialn2
       - sound_specialn2
-      - effect_specialn2
+      - effect_specialn2_formchange
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -3265,7 +3265,7 @@ list:
     scripts:
       - expression_specialn3
       - sound_specialn3
-      - effect_specialn3
+      - effect_specialn3_formchange
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -3295,7 +3295,7 @@ list:
     scripts:
       - "0x1c9dc22bf4"
       - "0x178b8272a9"
-      - "0x18b00bc3fa"
+      - effect_specialairn1start_formchange
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -3415,7 +3415,7 @@ list:
     scripts:
       - expression_specialairn2
       - sound_specialairn2
-      - effect_specialairn2
+      - effect_specialairn2_formchange
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -3445,7 +3445,7 @@ list:
     scripts:
       - expression_specialairn3
       - sound_specialairn3
-      - effect_specialairn3
+      - effect_specialairn3_formchange
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -3475,7 +3475,7 @@ list:
     scripts:
       - expression_specialsstart
       - sound_specialsstart
-      - effect_specialsstart_ultima
+      - effect_specialsstart_formchange
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -3505,7 +3505,7 @@ list:
     scripts:
       - expression_specials1
       - sound_specials1
-      - effect_specials1_ultima
+      - effect_specials1
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -3535,7 +3535,7 @@ list:
     scripts:
       - expression_specialssearch
       - sound_specialssearch
-      - effect_specialssearch_ultima
+      - effect_specialssearch
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -3655,7 +3655,7 @@ list:
     scripts:
       - expression_specials2
       - sound_specials2
-      - effect_specials2_ultima
+      - effect_specials2
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -3685,7 +3685,7 @@ list:
     scripts:
       - expression_specials3
       - sound_specials3
-      - effect_specials3_ultima
+      - effect_specials3
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -3745,7 +3745,7 @@ list:
     scripts:
       - expression_specialairsstart
       - sound_specialairsstart
-      - effect_specialairsstart_ultima
+      - effect_specialairsstart_formchange
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -3775,7 +3775,7 @@ list:
     scripts:
       - expression_specialairs1
       - sound_specialairs1
-      - effect_specialairs1_ultima
+      - effect_specialairs1
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -3805,7 +3805,7 @@ list:
     scripts:
       - expression_specialairssearch
       - sound_specialairssearch
-      - effect_specialairssearch_ultima
+      - effect_specialairssearch
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -3925,7 +3925,7 @@ list:
     scripts:
       - expression_specialairs2
       - sound_specialairs2
-      - effect_specialairs2_ultima
+      - effect_specialairs2
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -3955,7 +3955,7 @@ list:
     scripts:
       - expression_specialairs3
       - sound_specialairs3
-      - effect_specialairs3_ultima
+      - effect_specialairs3
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -4015,7 +4015,7 @@ list:
     scripts:
       - expression_specialhi
       - sound_specialhi
-      - effect_specialhi_ultima
+      - effect_specialhi_formchange
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -4045,7 +4045,7 @@ list:
     scripts:
       - expression_specialairhi
       - sound_specialairhi
-      - effect_specialairhi_ultima
+      - effect_specialairhi_formchange
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -4075,7 +4075,7 @@ list:
     scripts:
       - expression_speciallwstart
       - sound_speciallwstart
-      - effect_speciallwstart
+      - effect_speciallwstart_formchange
     extra:
       xlu_start: 7
       xlu_end: 9
@@ -4165,7 +4165,7 @@ list:
     scripts:
       - expression_speciallw
       - sound_speciallw
-      - effect_speciallw_ultima
+      - effect_speciallw
     extra:
       xlu_start: 1
       xlu_end: 12
@@ -4195,7 +4195,7 @@ list:
     scripts:
       - expression_specialairlwstart
       - sound_specialairlwstart
-      - effect_specialairlwstart
+      - effect_specialairlwstart_formchange
     extra:
       xlu_start: 7
       xlu_end: 9
@@ -4285,7 +4285,7 @@ list:
     scripts:
       - expression_specialairlw
       - sound_specialairlw
-      - effect_specialairlw_ultima
+      - effect_specialairlw
     extra:
       xlu_start: 1
       xlu_end: 12
@@ -4945,7 +4945,7 @@ list:
     scripts:
       - expression_throwf
       - sound_throwf
-      - effect_throwf_ultima
+      - effect_throwf
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -7295,7 +7295,7 @@ list:
       - name: j00entryr.nuanmb
         unk: 0
     scripts:
-      - expression_entryr
+      - expression_entryr_formchange
       - sound_entryr
       - effect_entryr
     extra:
@@ -7325,7 +7325,7 @@ list:
       - name: j00entryl.nuanmb
         unk: 0
     scripts:
-      - expression_entryl
+      - expression_entryl_formchange
       - sound_entryl
       - effect_entryl
     extra:
@@ -7357,7 +7357,7 @@ list:
     scripts:
       - expression_appealhir
       - sound_appealhir
-      - effect_appealhir
+      - effect_appealhir_formchange
     extra:
       xlu_start: 0
       xlu_end: 0
@@ -7387,7 +7387,7 @@ list:
     scripts:
       - expression_appealhil
       - sound_appealhil
-      - effect_appealhil
+      - effect_appealhil_formchange
     extra:
       xlu_start: 0
       xlu_end: 0

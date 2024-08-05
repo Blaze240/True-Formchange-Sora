@@ -57,6 +57,6 @@ unsafe extern "C" fn effect_escapeairslide(agent: &mut L2CAgentBase) {
 
 pub fn install() {
     Agent::new("trail")
-        .effect_acmd("effect_escapeairslide", effect_escapeairslide, Low)
+        .effect_acmd("effect_escapeairslide_formchange", effect_escapeairslide, Low)
         .install();
 }

@@ -86,6 +86,6 @@ unsafe extern "C" fn effect_attackdash(agent: &mut L2CAgentBase) {
 
 pub fn install() {
     Agent::new("trail")
-        .effect_acmd("effect_attackdash", effect_attackdash, Low)
+        .effect_acmd("effect_attackdash_formchange", effect_attackdash, Low)
         .install();
 }

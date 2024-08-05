@@ -109,6 +109,6 @@ unsafe extern "C" fn effect_specialn3(agent: &mut L2CAgentBase) {
 
 pub fn install() {
     Agent::new("trail")
-        .effect_acmd("effect_specialn3", effect_specialn3, Priority::Low)
+        .effect_acmd("effect_specialn3_formchange", effect_specialn3, Priority::Low)
         .install();
 }

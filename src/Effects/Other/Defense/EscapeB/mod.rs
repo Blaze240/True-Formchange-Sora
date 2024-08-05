@@ -74,6 +74,6 @@ unsafe extern "C" fn effect_escapeb(agent: &mut L2CAgentBase) {
 
 pub fn install() {
     Agent::new("trail")
-        .effect_acmd("effect_escapeb", effect_escapeb, Low)
+        .effect_acmd("effect_escapeb_formchange", effect_escapeb, Low)
         .install();
 }
